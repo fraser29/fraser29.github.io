@@ -76,7 +76,7 @@ theme_mode: # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://gravatar.com/userimage/52280834/6ae9ccb44c5d74afe5e694d3b3ce267e.jpeg?size=256
+avatar: assets/img/favicons/android-chrome-192x192.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
