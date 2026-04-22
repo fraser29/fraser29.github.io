@@ -1,56 +1,65 @@
-# Chirpy Starter
+# fraser29.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Personal GitHub Pages site for [fraser29](https://github.com/fraser29), focused on public projects and the medical imaging software ecosystem.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Site structure
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+### Pages
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+- `index.html` - main landing page
+- `research.html` - research page (includes ORCID)
+- `repositories.html` - all public repos owned by `fraser29`
+- `ecosystem.html` - medical imaging ecosystem deep dive
+- `clinical-tools.html` - clinical/translational tools
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+### Shared assets
+
+- `assets/site/styles.css` - shared styling
+- `assets/site/data.js` - editable content and curated project catalog
+- `assets/site/common.js` - shared layout and card helpers
+- `assets/site/github.js` - GitHub API fetch helpers
+
+### Page scripts
+
+- `assets/site/home.js`
+- `assets/site/research.js`
+- `assets/site/repositories.js`
+- `assets/site/ecosystem.js`
+- `assets/site/clinical.js`
+
+## Quick content updates
+
+Most updates should happen in `assets/site/data.js`.
+
+### Add or edit a project
+
+Update the `projects` array. Each item supports:
+
+- `repo`: GitHub repo name under `fraser29`
+- `title`: display name
+- `area`: category used for filtering
+- `summary`: short project description
+- `tags`: list of keywords
+- `links`: optional `docs` and `pypi` URLs
+
+### Update navigation and landing sections
+
+Edit `navItems` and `landingSections` in `assets/site/data.js`.
+
+### Update ORCID link
+
+Edit `siteMeta.orcidUrl` in `assets/site/data.js`.
+
+### Update the ecosystem flow
+
+Edit `flowStages` to change the step titles and details in the interactive flow section.
+
+## Local preview
+
+Open `index.html` directly in a browser for quick checks, or use a static server:
+
+```bash
+python3 -m http.server
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
-
-## Prerequisites
-
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of
-the basic environment. [Git](https://git-scm.com/) also needs to be installed.
-
-## Installation
-
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it
-`USERNAME.github.io`, where `USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```console
-$ bundle
-```
-
-## Usage
-
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Then visit `http://localhost:8000`.

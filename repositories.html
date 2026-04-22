@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repositories (All) | Fraser's Research & Software Portfolio</title>
+  <meta name="description" content="All public repositories owned by fraser29.">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="icon" href="assets/img/favicons/favicon.ico">
+  <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#1b2f57">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#b81f3f">
+  <link rel="stylesheet" href="assets/site/styles.css">
+</head>
+<body>
+  <main class="container">
+    <nav id="site-nav" class="site-nav"></nav>
+
+    <header class="hero">
+      <h1 id="page-title"></h1>
+      <p id="page-subtitle"></p>
+      <p class="small">Only public repositories owned by <code>fraser29</code> are shown.</p>
+    </header>
+
+    <section>
+      <h2>Browse repositories</h2>
+      <div class="controls">
+        <input id="repo-search" type="search" placeholder="Search repo name, description, or language...">
+        <select id="repo-sort">
+          <option value="updated">Sort: recently updated</option>
+          <option value="stars">Sort: stars</option>
+          <option value="name">Sort: name (A-Z)</option>
+        </select>
+      </div>
+      <p id="repo-count" class="small"></p>
+      <div class="grid" id="repo-grid"></div>
+    </section>
+
+    <footer id="site-footer"></footer>
+  </main>
+
+  <script type="module" src="assets/site/repositories.js"></script>
+</body>
+</html>
