@@ -278,6 +278,65 @@ input {
   color: #8f112d;
 }
 
+.mindmap {
+  margin-top: 0.8rem;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mindmap-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mindmap-edge {
+  stroke: #7f90b2;
+  stroke-width: 2;
+  opacity: 0.45;
+}
+
+.mindmap-edge.active {
+  stroke: #b81f3f;
+  stroke-width: 3;
+  opacity: 0.95;
+}
+
+.mindmap-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.5rem 0.65rem;
+  min-width: 130px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(16, 26, 47, 0.12);
+}
+
+.mindmap-node .node-name {
+  color: #8f112d;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.mindmap-node .node-role {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.mindmap-node.active {
+  background: var(--chip-active);
+  border-color: #8f112d;
+}
+
 #flow-details {
   margin-top: 0.8rem;
   border-top: 1px dashed var(--border);

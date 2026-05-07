@@ -7,7 +7,9 @@ export async function fetchPublicOwnedRepos() {
     const response = await fetch(API_URL);
     if (!response.ok) throw new Error(`GitHub API request failed (${response.status})`);
     const repos = await response.json();
-    return repos.filter((repo) => repo.owner?.login === siteMeta.owner && !repo.private);
+    return repos.filter(
+      (repo) => repo.owner?.login === siteMeta.owner && !repo.private && !repo.fork
+    );
   } catch (error) {
     console.warn("Failed to fetch GitHub repositories", error);
     return [];

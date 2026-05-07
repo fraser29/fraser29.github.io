@@ -24,9 +24,16 @@
     </header>
 
     <section>
-      <h2>Pipeline flow</h2>
-      <div class="flow" id="flow"></div>
-      <div id="flow-details" class="small"></div>
+      <h2>Interactive ecosystem mind map</h2>
+      <p>Group by role or by interaction flow, then click a node to highlight direct connections.</p>
+      <div class="controls">
+        <select id="mindmap-group-mode" aria-label="Mind map grouping mode">
+          <option value="role">Group by role</option>
+          <option value="interaction">Group by interaction flow</option>
+        </select>
+      </div>
+      <div id="mindmap" class="mindmap"></div>
+      <div id="mindmap-details" class="small"></div>
     </section>
 
     <section>
